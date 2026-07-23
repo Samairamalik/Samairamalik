@@ -2,12 +2,12 @@
 
 <img src="https://capsule-render.vercel.app/api?type=transparent&height=150&text=Samaira%20Malik&fontColor=7C5CFF&fontSize=56&fontAlignY=40&desc=ML%20%C2%B7%20Data%20%C2%B7%20Product%20%E2%80%94%20Bengaluru&descAlignY=66&descSize=15" alt="Samaira Malik" />
 
-<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=500&size=17&pause=1400&color=7C5CFF&center=true&vCenter=true&width=700&lines=I+build+the+system+and+decide+what+it+should+do.;signal+%E2%86%92+system+%E2%86%92+something+someone+actually+uses.;the+boring+part+is+the+data.+the+data+is+the+product." alt="tagline" />
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=500&size=17&pause=1400&color=7C5CFF&center=true&vCenter=true&width=700&lines=ML%2C+data%2C+and+the+question+of+what's+worth+building.;signal+%E2%86%92+system+%E2%86%92+something+someone+actually+uses.;most+of+the+work+happens+upstream+of+the+model." alt="tagline" />
 
 <br/>
 
-<a href="https://linkedin.com/in/YOUR-HANDLE"><img src="https://img.shields.io/badge/LinkedIn-7C5CFF?style=flat-square&logo=linkedin&logoColor=white&labelColor=0D1117" alt="LinkedIn" /></a>
-<a href="mailto:YOUR-EMAIL"><img src="https://img.shields.io/badge/Email-7C5CFF?style=flat-square&logo=gmail&logoColor=white&labelColor=0D1117" alt="Email" /></a>
+<a href="https://www.linkedin.com/in/samaira-malik-a06266264/"><img src="https://img.shields.io/badge/LinkedIn-7C5CFF?style=flat-square&logo=linkedin&logoColor=white&labelColor=0D1117" alt="LinkedIn" /></a>
+<a href="mailto:samaira6005@gmail.com"><img src="https://img.shields.io/badge/Email-7C5CFF?style=flat-square&logo=gmail&logoColor=white&labelColor=0D1117" alt="Email" /></a>
 <a href="YOUR-RESUME-LINK"><img src="https://img.shields.io/badge/Résumé-F5A524?style=flat-square&logo=readdotcv&logoColor=white&labelColor=0D1117" alt="Resume" /></a>
 <img src="https://img.shields.io/badge/Open%20to-AI%20%2F%20Data%20%2F%20APM%20Internships%20'27-1F2937?style=flat-square&labelColor=0D1117" alt="Status" />
 
@@ -17,12 +17,12 @@
 
 ### `~/whoami`
 
-I sit where **ML, data, and product** overlap — building the pipeline, and also arguing about what it should output and who it's for. Most of my work starts as an unlovely spreadsheet or a stakeholder saying "we just need a number," and ends as something that runs on a schedule and gets trusted enough to make decisions on.
+I work across **ML, data, and product** — building the pipeline, and caring about what it outputs and who it's for. Most of my work starts as an unlovely spreadsheet, or someone saying "we just need a number," and the interesting part is usually figuring out which number they actually meant.
 
 ```yaml
 samaira:
   builds:    ML and data systems, end to end
-  and_also:  decides what they should do in the first place
+  thinks_about: what they're for, not only how they work
   studying:  B.Tech, Computer Science & AI — Manipal Institute of Technology, Bengaluru
   primary:   Python   # C++ when it has to be fast
 
@@ -39,18 +39,18 @@ the_overlap: >
 
 ---
 
-### `~/decisions`
+### `~/tradeoffs`
 
-The part of the work that isn't code. Three calls I've had to make and defend:
+Some of the choices behind the work above — mostly the ones where the engineering answer and the useful answer weren't the same.
 
-> **Free official APIs over the highest-signal source.**
-> The obvious data source for trend detection was also the one with no clean API path. I scoped the MVP on sources I could actually run in production, wrote up what we'd lose, and put the tradeoff in front of stakeholders instead of quietly shipping the weaker version. Ship a real v1, name the gap.
+> **Weaker data source, but one that actually runs.**
+> The most useful source for trend detection didn't have a clean API path. I built the first version on the sources I could reliably run in production, wrote up what we'd be missing, and took that to my manager rather than deciding it quietly. The signal is thinner than it could be — but it's documented, and it ships.
 
-> **Explainability as a hard requirement, not a nice-to-have.**
-> A forecasting output nobody can defend in a meeting is a number that gets ignored. So every prediction carries a human-readable reason. It cost accuracy headroom and bought adoption — the right trade when the user is a person, not a dashboard.
+> **Every forecast carries a reason.**
+> My manager wanted a readable explanation attached to each prediction, not just a number, because the output has to survive being questioned in a meeting. That constrained the modelling more than I expected, and I'm still working out what it costs in accuracy.
 
-> **Config over code, so scale isn't a sprint.**
-> One shared engine, one config file per category. Onboarding a new category became an afternoon instead of a release cycle. The engineering cost was front-loaded deliberately; the product argument was that the second and third customer shouldn't be as expensive as the first.
+> **One engine, one config per category.**
+> I set it up so adding a category means writing a config file rather than a new script. The first one took longer than it would have otherwise; everything after has been much faster. Whether that was the right call depends on how many categories get added — so far, it's held up.
 
 ---
 
@@ -61,7 +61,7 @@ The part of the work that isn't code. Three calls I've had to make and defend:
 | **[VizLens](https://github.com/Samairamalik/VIZ-LENS)** | Google Lens for *abstract* concepts. I own the AI layer — a three-stage chain generating self-contained HTML5 visualisations, structured quizzes, and a code judge that returns the failing line plus a visual reference. Scoped the three surfaces as the product, not just the model. | `Gemini` `TypeScript` `Structured output` | National hackathon finalist |
 | **Retail Reporting Automation** | Config-driven pipeline replacing a manual monthly FMCG reporting cycle: ingestion → computation → validation → narrative → deck. LLM writes the prose; deterministic code owns every number. | `Python` `YAML` `LLM narrative` `pytest` | Internal · shipped |
 | **Ingredient Trend Forecasting** | Detects emerging food trends from social signal and forecasts next month's movers — with a defensible reason attached to every prediction. Owned solo, from data sourcing to spec. | `Python` `Reddit/YouTube APIs` `Time series` | Internal · in build |
-| **[NeuroSense](https://github.com/Samairamalik/NeuroSense)** | *(one line — what it does and who it's for)* | `Python` `Jupyter` | — |
+| **[NeuroSense](https://github.com/Samairamalik/NeuroSense)** | Multimodal screening for **early Parkinson's detection**. Independent models on voice, handwriting/spiral drawings, and MRI — each returning its own prediction and confidence, so modalities can be *compared* rather than blended into one opaque score. Scoped deliberately as clinical decision support, not a diagnostic replacement. | `CNN` `XGBoost` `SVM` `HOG` | Team of 6 · complete |
 | **Shadow Auditor** | Research pilot measuring how dialect and register shift model behaviour. Targeting a workshop submission. | `Evaluation` `NLP` | In progress |
 
 ---
@@ -105,15 +105,6 @@ The part of the work that isn't code. Three calls I've had to make and defend:
 <img src="https://img.shields.io/badge/PostgreSQL-34D399?style=flat-square&logo=postgresql&logoColor=white&labelColor=0D1117" />
 <img src="https://img.shields.io/badge/GitHub%20Actions-34D399?style=flat-square&logo=githubactions&logoColor=white&labelColor=0D1117" />
 <img src="https://img.shields.io/badge/GCP-34D399?style=flat-square&logo=googlecloud&logoColor=white&labelColor=0D1117" />
-</td>
-</tr>
-<tr>
-<td><b>Product</b></td>
-<td>
-<img src="https://img.shields.io/badge/Specs%20%26%20Scoping-E879F9?style=flat-square&logo=notion&logoColor=white&labelColor=0D1117" />
-<img src="https://img.shields.io/badge/Stakeholder%20Discovery-E879F9?style=flat-square&logo=googlemeet&logoColor=white&labelColor=0D1117" />
-<img src="https://img.shields.io/badge/Metrics%20%26%20Tradeoffs-E879F9?style=flat-square&logo=googleanalytics&logoColor=white&labelColor=0D1117" />
-<img src="https://img.shields.io/badge/Roadmapping-E879F9?style=flat-square&logo=jira&logoColor=white&labelColor=0D1117" />
 </td>
 </tr>
 </table>
