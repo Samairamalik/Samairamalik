@@ -1,15 +1,15 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=transparent&height=150&text=Samaira%20Malik&fontColor=7C5CFF&fontSize=56&fontAlignY=40&desc=Applied%20AI%20%C2%B7%20Data%20Systems%20%C2%B7%20Bengaluru&descAlignY=66&descSize=15" alt="Samaira Malik" />
+<img src="https://capsule-render.vercel.app/api?type=transparent&height=150&text=Samaira%20Malik&fontColor=7C5CFF&fontSize=56&fontAlignY=40&desc=ML%20%C2%B7%20Data%20%C2%B7%20Product%20%E2%80%94%20Bengaluru&descAlignY=66&descSize=15" alt="Samaira Malik" />
 
-<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=500&size=17&pause=1400&color=7C5CFF&center=true&vCenter=true&width=680&lines=signal+%E2%86%92+system.;pipelines+that+hold+up+when+the+data+doesn't.;LLMs+for+language%2C+deterministic+code+for+numbers." alt="tagline" />
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=500&size=17&pause=1400&color=7C5CFF&center=true&vCenter=true&width=700&lines=I+build+the+system+and+decide+what+it+should+do.;signal+%E2%86%92+system+%E2%86%92+something+someone+actually+uses.;the+boring+part+is+the+data.+the+data+is+the+product." alt="tagline" />
 
 <br/>
 
 <a href="https://linkedin.com/in/YOUR-HANDLE"><img src="https://img.shields.io/badge/LinkedIn-7C5CFF?style=flat-square&logo=linkedin&logoColor=white&labelColor=0D1117" alt="LinkedIn" /></a>
 <a href="mailto:YOUR-EMAIL"><img src="https://img.shields.io/badge/Email-7C5CFF?style=flat-square&logo=gmail&logoColor=white&labelColor=0D1117" alt="Email" /></a>
 <a href="YOUR-RESUME-LINK"><img src="https://img.shields.io/badge/Résumé-F5A524?style=flat-square&logo=readdotcv&logoColor=white&labelColor=0D1117" alt="Resume" /></a>
-<img src="https://img.shields.io/badge/Open%20to-SDE%20%2F%20AI%20Internships%20'27-1F2937?style=flat-square&labelColor=0D1117" alt="Status" />
+<img src="https://img.shields.io/badge/Open%20to-AI%20%2F%20Data%20%2F%20APM%20Internships%20'27-1F2937?style=flat-square&labelColor=0D1117" alt="Status" />
 
 </div>
 
@@ -17,30 +17,40 @@
 
 ### `~/whoami`
 
-I work at the seam between **data engineering and applied AI** — the part where a model is only as good as the pipeline feeding it. Most of what I build starts as an unlovely spreadsheet or an API firehose and ends as something that runs on a schedule and doesn't need me watching it.
+I sit where **ML, data, and product** overlap — building the pipeline, and also arguing about what it should output and who it's for. Most of my work starts as an unlovely spreadsheet or a stakeholder saying "we just need a number," and ends as something that runs on a schedule and gets trusted enough to make decisions on.
 
 ```yaml
-engineer:
-  name:      Samaira Malik
-  role:      Applied AI / Data Engineering
+samaira:
+  builds:    ML and data systems, end to end
+  and_also:  decides what they should do in the first place
   studying:  B.Tech, Computer Science & AI — Manipal Institute of Technology, Bengaluru
-  primary:   Python  # C++ when it has to be fast
+  primary:   Python   # C++ when it has to be fast
 
-focus:
-  - turning messy, real-world signal into pipelines that survive month two
-  - LLM systems with verification layers, not vibes
-  - forecasting and retrieval on data nobody cleaned for you
+works_across:
+  data:      ingestion, validation, feature pipelines, forecasting
+  ml:        LLM chains with verification, time series, evaluation
+  product:   scoping, tradeoffs, stakeholder translation, shipping
 
-currently:
-  building:  config-driven reporting automation + ingredient trend forecasting
-  learning:  production ML — FastAPI, Docker, CI, GCP
-  reading:   dialect & register bias in LLM evaluation
-
-principles:
-  - "if a model writes the number, something deterministic checks it"
-  - "config over code — one engine, many categories"
-  - "explainable beats accurate-but-mute"
+the_overlap: >
+  The interesting questions live between the three — what's worth
+  building, what the data can genuinely support, and what someone
+  will still trust in month six.
 ```
+
+---
+
+### `~/decisions`
+
+The part of the work that isn't code. Three calls I've had to make and defend:
+
+> **Free official APIs over the highest-signal source.**
+> The obvious data source for trend detection was also the one with no clean API path. I scoped the MVP on sources I could actually run in production, wrote up what we'd lose, and put the tradeoff in front of stakeholders instead of quietly shipping the weaker version. Ship a real v1, name the gap.
+
+> **Explainability as a hard requirement, not a nice-to-have.**
+> A forecasting output nobody can defend in a meeting is a number that gets ignored. So every prediction carries a human-readable reason. It cost accuracy headroom and bought adoption — the right trade when the user is a person, not a dashboard.
+
+> **Config over code, so scale isn't a sprint.**
+> One shared engine, one config file per category. Onboarding a new category became an afternoon instead of a release cycle. The engineering cost was front-loaded deliberately; the product argument was that the second and third customer shouldn't be as expensive as the first.
 
 ---
 
@@ -48,11 +58,10 @@ principles:
 
 | Project | What it does | Stack | Status |
 | :--- | :--- | :--- | :--- |
-| **[VizLens](https://github.com/Samairamalik/VIZ-LENS)** | Google Lens for *abstract* concepts. I own the AI layer — a three-stage chain that generates self-contained HTML5 visualisations, structured quizzes, and a code judge that returns the failing line plus a visual reference. | `Gemini` `TypeScript` `Structured output` | National hackathon finalist |
-| **Retail Reporting Automation** | Config-driven pipeline replacing a manual monthly FMCG reporting cycle: ingestion → computation → validation → narrative → deck. One shared engine, one YAML per category. | `Python` `YAML` `LLM narrative` `pytest` | Internal · shipped |
-| **Ingredient Trend Forecasting** | Detects emerging food trends from social signal and forecasts next month's movers — with a human-readable reason attached to every prediction. | `Python` `Reddit/YouTube APIs` `Time series` | Internal · in build |
-| **[NeuroSense](https://github.com/Samairamalik/NeuroSense)** | *(add one line — what it does and why it's interesting)* | `Python` `Jupyter` | — |
-| **Traffic Demand Forecasting** | ~92% R² on a demand prediction competition using geohash target encoding, same-slot lag features, and cyclical time encodings. | `LightGBM` `Feature engineering` | Complete |
+| **[VizLens](https://github.com/Samairamalik/VIZ-LENS)** | Google Lens for *abstract* concepts. I own the AI layer — a three-stage chain generating self-contained HTML5 visualisations, structured quizzes, and a code judge that returns the failing line plus a visual reference. Scoped the three surfaces as the product, not just the model. | `Gemini` `TypeScript` `Structured output` | National hackathon finalist |
+| **Retail Reporting Automation** | Config-driven pipeline replacing a manual monthly FMCG reporting cycle: ingestion → computation → validation → narrative → deck. LLM writes the prose; deterministic code owns every number. | `Python` `YAML` `LLM narrative` `pytest` | Internal · shipped |
+| **Ingredient Trend Forecasting** | Detects emerging food trends from social signal and forecasts next month's movers — with a defensible reason attached to every prediction. Owned solo, from data sourcing to spec. | `Python` `Reddit/YouTube APIs` `Time series` | Internal · in build |
+| **[NeuroSense](https://github.com/Samairamalik/NeuroSense)** | *(one line — what it does and who it's for)* | `Python` `Jupyter` | — |
 | **Shadow Auditor** | Research pilot measuring how dialect and register shift model behaviour. Targeting a workshop submission. | `Evaluation` `NLP` | In progress |
 
 ---
@@ -98,6 +107,15 @@ principles:
 <img src="https://img.shields.io/badge/GCP-34D399?style=flat-square&logo=googlecloud&logoColor=white&labelColor=0D1117" />
 </td>
 </tr>
+<tr>
+<td><b>Product</b></td>
+<td>
+<img src="https://img.shields.io/badge/Specs%20%26%20Scoping-E879F9?style=flat-square&logo=notion&logoColor=white&labelColor=0D1117" />
+<img src="https://img.shields.io/badge/Stakeholder%20Discovery-E879F9?style=flat-square&logo=googlemeet&logoColor=white&labelColor=0D1117" />
+<img src="https://img.shields.io/badge/Metrics%20%26%20Tradeoffs-E879F9?style=flat-square&logo=googleanalytics&logoColor=white&labelColor=0D1117" />
+<img src="https://img.shields.io/badge/Roadmapping-E879F9?style=flat-square&logo=jira&logoColor=white&labelColor=0D1117" />
+</td>
+</tr>
 </table>
 
 ---
@@ -120,11 +138,11 @@ principles:
 
 <br/>
 
-**Sports Secretary** and **basketball captain** on campus — which is mostly an exercise in shipping under a deadline with people who have their own opinions. Turns out running a season and running a project have more overlap than either side admits.
+**Sports Secretary** and **basketball captain** on campus — mostly an exercise in shipping under a deadline with people who have their own opinions. Running a season and running a project have more overlap than either side admits: you're allocating limited resources, managing morale, and deciding what to cut in week nine.
 
 **VP of NEURA**, the campus AI club, where I spend a lot of time convincing people that the boring part — the data — is the interesting part.
 
-Currently curious about basketball analytics as a computer vision problem. Ask me about it and I will not stop talking.
+Currently curious about basketball analytics as a computer vision problem. Ask me and I will not stop talking.
 
 </details>
 
@@ -132,7 +150,7 @@ Currently curious about basketball analytics as a computer vision problem. Ask m
 
 <div align="center">
 
-<sub><i>Open to Summer 2027 internships in applied AI, ML engineering, and data platform work.</i></sub>
+<sub><i>Open to Summer 2027 internships across applied ML, data platform, and product.</i></sub>
 
 <br/><br/>
 
